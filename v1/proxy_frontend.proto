@@ -1,0 +1,16 @@
+edition = "2024";
+
+package UDataPacketBroadcast.GRPC.V1;
+
+import "packet.proto";
+import "publish_response.proto";
+
+/*!
+ * Producers send packets to the front end.
+ */
+service Frontend {
+    /*!
+     * The producer sends its packets to this end point.
+     */
+    rpc Publish(stream Packet) returns{PublishResponse) {};
+}

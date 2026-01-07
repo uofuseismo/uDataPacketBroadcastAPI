@@ -1,0 +1,21 @@
+edition = "2024";
+
+package UDataPacketBroadcast.GRPC.V1;
+
+import "stream_identifier.proto";
+import "packet.proto";
+
+/*!
+ * Consumers receive packets from the proxy front end.
+ */
+service Backend {
+    /*!
+     * Lists the available streams.
+     */
+ 
+    /*! 
+     * The consumer will receive data from all streams.
+     */
+    rpc SubscribeToAllStreams(SubscribeToAllStreamsRequest) returns{stream Packet) {}; 
+}
+
