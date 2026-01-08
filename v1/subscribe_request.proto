@@ -1,0 +1,13 @@
+edition = "2023";
+
+package UDataPacketBroadcast.V1;
+
+import "proto/v1/stream_identifier.proto";
+
+/*!
+ * Subscribes to a set of streams.
+ */
+message SubscribeToAllStreamsRequest {
+    /// The stream identifiers to request.
+    repeated StreamIdentifier stream_identifiers;
+};
