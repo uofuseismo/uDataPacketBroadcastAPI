@@ -1,14 +1,15 @@
-edition = "2024";
+edition = "2023";
+import "google/protobuf/timestamp.proto";
 
-package UDataPacketBroadcast.GRPC.V1;
+package UDataPacketBroadcast.V1;
 
-option features.utf8_validation = NONE;
-option features.enforce_naming_style = STYLE2024;
-option features.default_symbol_visibility = EXPORT_ALL;
-option features.(pb.cpp).string_type = STRING;
+//option features.utf8_validation = NONE;
+//option features.enforce_naming_style = STYLE2024;
+//option features.default_symbol_visibility = EXPORT_ALL;
+//option features.(pb.cpp).string_type = STRING;
 
-import "stream_identifier.proto";
-import "data_type.proto";
+import "proto/v1/stream_identifier.proto";
+import "proto/v1/data_type.proto";
 
 /*!
  * Defines a data packet.  This amounts to a stream identifier, a start time,
@@ -18,17 +19,10 @@ message Packet {
     /*!
      * Defines the underlying data type when interpreting data.
      */
-    enum DataType {
-        DATA_TYPE_UNKNOWN = 0;     /*! The data type is unkonwn. */
-        DATA_TYPE_INTEGER_32 = 1;  /*! The data type is interpreted as 32-bit integers. */
-        DATA_TYPE_FLOAT = 2;       /*! The data type is interpreted as 32-bit float values. */
-        DATA_TYPE_DOUBLE = 3;      /*! The data type is inteprreted as 64-bit float values. */
-        DATA_TYPE_TEXT = 4;        /*! The data type is intereprted as text data - this is unusual. */
-        DATA_TYPE_INTEGER_64 = 5;  /*! The data type is inteprreted as 64-bit integers. */
-    }
     StreamIdentifier stream_identifier = 1; /// The packet identifier.
-    timestamp start_time = 2; /// The packet's start time (UTC) in microseconds since the epoch.
+    google.protobuf.Timestamp start_time = 2; /// The packet's start time (UTC) in microseconds since the epoch.
     double sampling_rate = 3; /// The sampling rate in Hz.
     DataType data_type = 4; /// The data type.
-    bytes data = 5; /// The data.  This is always stored in little endian.
+    uint32 number_of_samples = 5; /// The number of samples.
+    bytes data = 6; /// The data.  This is always stored in little endian.
 }

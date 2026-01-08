@@ -1,2 +1,15 @@
-edition "2024";
+edition = "2023";
+
+package UDataPacketBroadcast.V1;
+
+/*!
+ * Summarizes the publishers publishing statistics.  This concludes a publish
+ * event.
+ */
+message PublishResponse {
+    /// The number of packets sent.
+    uint64 packets_sent = 1;
+    /// The number of packets rejected.
+    uint64 packets_rejected = 2;
+};
 

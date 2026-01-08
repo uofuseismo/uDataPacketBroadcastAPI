@@ -1,16 +1,16 @@
-edition = "2024";
+edition = "2023";
 
-package UDataPacketBroadcast.GRPC.V1;
+package UDataPacketBroadcast.V1;
 
-import "packet.proto";
-import "publish_response.proto";
+import "proto/v1/packet.proto";
+import "proto/v1/publish_response.proto";
 
 /*!
  * Producers send packets to the front end.
  */
-service Frontend {
+service ProxyFrontend {
     /*!
      * The producer sends its packets to this end point.
      */
-    rpc Publish(stream Packet) returns{PublishResponse) {};
+    rpc Publish(stream Packet) returns(PublishResponse) {};
 }
