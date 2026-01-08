@@ -1,0 +1,9 @@
+edition = "2023";
+
+package UDataPacketBroadcast.V1;
+
+/*!
+ * Subscribes to all streams.
+ */
+message SubscribeToAllStreamsRequest {
+};
