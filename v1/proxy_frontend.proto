@@ -1,9 +1,9 @@
 edition = "2023";
 
-package UDataPacketBroadcast.V1;
+package UDataPacketBroadcastAPI.V1;
 
-import "proto/v1/packet.proto";
-import "proto/v1/publish_response.proto";
+import "uDataPacketBroadcastAPI/v1/packet.proto";
+import "uDataPacketBroadcastAPI/v1/publish_response.proto";
 
 /*!
  * Producers send packets to the front end.
@@ -11,6 +11,7 @@ import "proto/v1/publish_response.proto";
 service ProxyFrontend {
     /*!
      * The producer sends its packets to this end point.
+     * When finished returns of summary of packets sent.
      */
     rpc Publish(stream Packet) returns(PublishResponse) {};
 }

@@ -1,9 +1,9 @@
 edition = "2023";
 
-package UDataPacketBroadcast.GRPC.V1;
+package UDataPacketBroadcastAPI.V1;
 
-imoprt "proto/v1/subscribe_to_all_streams_request.proto";
-import "proto/v1/packet.proto";
+imoprt "uDataPacketBroadcastAPI/v1/subscribe_to_all_streams_request.proto";
+import "uDataPacketBroadcastAPI/v1/packet.proto";
 
 /*!
  * Consumers receive packets from the proxy front end.

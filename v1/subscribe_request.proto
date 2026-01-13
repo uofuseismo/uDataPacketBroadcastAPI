@@ -1,8 +1,8 @@
 edition = "2023";
 
-package UDataPacketBroadcast.V1;
+package UDataPacketBroadcastAPI.V1;
 
-import "proto/v1/stream_identifier.proto";
+import "uDataPacketBroadcastAPI/v1/stream_identifier.proto";
 
 /*!
  * Subscribes to a set of streams.

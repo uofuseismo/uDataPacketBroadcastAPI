@@ -8,8 +8,8 @@ package UDataPacketBroadcast.V1;
 //option features.default_symbol_visibility = EXPORT_ALL;
 //option features.(pb.cpp).string_type = STRING;
 
-import "proto/v1/stream_identifier.proto";
-import "proto/v1/data_type.proto";
+import "uDataPacketBroadcastAPI/v1/stream_identifier.proto";
+import "uDataPacketBroadcastAPI/v1/data_type.proto";
 
 /*!
  * Defines a data packet.  This amounts to a stream identifier, a start time,
