@@ -7,7 +7,7 @@ import "uDataPacketBroadcastAPI/v1/stream_identifier.proto";
 /*!
  * Subscribes to a set of streams.
  */
-message SubscribeToAllStreamsRequest {
+message SubscribeRequest {
     /// The stream identifiers to request.
-    repeated StreamIdentifier stream_identifiers;
+    repeated StreamIdentifier stream_identifiers = 1;
 };

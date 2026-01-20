@@ -1,6 +1,6 @@
 edition = "2023";
 
-package UDataPacketBroadcast.V1;
+package UDataPacketBroadcastAPI.V1;
 
 //option features.utf8_validation = NONE;
 //option features.enforce_naming_style = STYLE_LEGACY;

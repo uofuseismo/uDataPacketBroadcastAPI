@@ -1,7 +1,7 @@
 edition = "2023";
 import "google/protobuf/timestamp.proto";
 
-package UDataPacketBroadcast.V1;
+package UDataPacketBroadcastAPI.V1;
 
 //option features.utf8_validation = NONE;
 //option features.enforce_naming_style = STYLE2024;

@@ -1,6 +1,6 @@
 edition = "2023";
 
-package UDataPacketBroadcast.V1;
+package UDataPacketBroadcastAPI.V1;
 
 /*!
  * Subscribes to all streams.

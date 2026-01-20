@@ -1,6 +1,6 @@
 edition = "2023";
 
-package UDataPacketBroadcast.V1;
+package UDataPacketBroadcastAPI.V1;
 
 /*!
  * Summarizes the publishers publishing statistics.  This concludes a publish
